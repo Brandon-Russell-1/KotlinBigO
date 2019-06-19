@@ -17,7 +17,7 @@ fun main(args: Array<String>) {
     // Logarithmic 0(log n)
     println("Logarithmic 0(log n)")
     var i = 1
-    var n = 10
+    var n = 5
     while (i < n) {
         println("Hey - I'm busy looking at: $i")
         i *= 2
@@ -69,6 +69,37 @@ fun main(args: Array<String>) {
     for (i in 1..factorialUsingForLoop(n)) {
         println("Hey - I'm busy looking at: $i")
     }
+
+
+    //Class Example...there is a test for this
+    var myMathExample = MathExample()
+    println(myMathExample.addNums(1,1))
+
+    val x = true
+    if (x){
+        println("x is true")
+    }else{
+        println("x is false")
+    }
+
+    val year = 2019
+    when (year){
+        2010 -> "2010!!!"
+        2019 -> "2019!!!!!!!!!!!!!!"
+        else -> "Not in list?"
+    }
+
+    var myList = mutableListOf(1,2,3,4)
+    myList.forEach{println(it)}
+
+    var myMap = mutableMapOf("Brandon" to "Cool", "Daniela" to "theRussell!")
+
+    println(myMap["Brandon"])
+
+    //Lambdas
+    val square: (Int) -> Int = {it * it}
+    println(square(2))
+
 
 
 }

@@ -1,22 +1,28 @@
 package app.bwizlabs.kotlingbigo
 
-import junit.framework.Assert.assertEquals
+
 import org.junit.Test
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.runner.RunWith
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringRunner
 
+
+
+
 @RunWith(SpringRunner::class)
 @SpringBootTest
 class KotlingbigoApplicationTests {
 
-    var MathExample myMathExample
+    private var myMathExample = MathExample()
+
 
     @BeforeEach
-    fun initEach(){
+    fun initEach() {
         myMathExample = MathExample()
     }
+
 
     @Test
     fun contextLoads() {
@@ -25,7 +31,7 @@ class KotlingbigoApplicationTests {
     @Test
     fun addTest(){
 
-        assertEquals(2, myMathExample.addNums(1,1))
+        Assertions.assertEquals(2, myMathExample.addNums(1,1))
 
     }
 
